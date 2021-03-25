@@ -35,7 +35,7 @@
   Users are (hopefully) expected to follow this lisense guidelines, or else they shalt be smitten with the wrath of my dissapointment.
 
   # <a name="contributors"></a> Contributors
-   undefined
+   No Contributors
   
   # <a name="tests"></a> Tests
   undefined
