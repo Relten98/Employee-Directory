@@ -38,7 +38,7 @@
    No Contributors
   
   # <a name="tests"></a> Tests
-  undefined
+  No tests
   <br />
   
   # <a name="contact"></a> Contact information
