@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+           <Title>Employee Directory</Title>
       <wrapper>
         {/* Spaces for when I want extra content  */}
         <empContainer />
