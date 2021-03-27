@@ -1,6 +1,6 @@
 // Imports for react.
 import React from 'react';
-import '../Wrapper/style.css';
+import "./style.css";
 import API from '../utils/api.js';
 
 // The core empContainer that will be used to fill out with employees.
@@ -15,5 +15,4 @@ class empContainer extends React.Component {
 
 
 }
-
 // OOOOOWA-AH-AH-AH
