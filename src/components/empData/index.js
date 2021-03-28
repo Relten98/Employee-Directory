@@ -2,8 +2,9 @@
 import React from 'react';
 import "./style.css";
 import API from "../../utils/API";
+import "../empTable";
 
-// The core empContainer that will be used to fill out with employees.
+// The core empData that will be used to fill out with employees.
 let empData = () => {
     let [devState, setDevState] = useState({
         users: [],
