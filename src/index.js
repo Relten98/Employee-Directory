@@ -6,5 +6,3 @@ import "./index.css";
 
 // The magic that properly renders the application.
 ReactDOM.render(<App />, document.getElementById("root"));
-
-http://localhost:

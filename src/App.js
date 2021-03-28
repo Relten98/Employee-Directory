@@ -1,6 +1,6 @@
 import react from "react";
-import empContainer from './components/empContainer';
-import './App.css';
+// import empContainer from './components/empContainer';
+import './index.css';
 
 function App() {
   return (
@@ -9,7 +9,6 @@ function App() {
       <wrapper>
         {/* Spaces for when I want extra content  */}
         <empContainer />
-      
       </wrapper>
     </div>
   );
