@@ -1,8 +1,10 @@
 // Imports for react.
 import React from 'react';
 import "./style.css";
-import API from "../../utils/API";
+import api from "../../utils/api";
 import "../empTable";
+import dataContext from "../empTable"
+
 
 // The core empData that will be used to fill out with employees.
 let empData = () => {
@@ -33,9 +35,26 @@ let empData = () => {
             })
         }
 
+        let compdata = (a , b) => {
 
+        }
     }
 
+    let sortedusrs = devState.filterlist.sort(compdata);
 
+    setDevState({
+        ...devState,
+        sfilterlist: sortedusrs
+    });
+
+
+// Our DOM elements will go below, just need to get these comparitors to function.
+return (
+    <div>
+        
+    </div>
+)
 }
+// Exports our information
+export default empData;
 // OOOOOWA-AH-AH-AH

@@ -2,10 +2,10 @@
 import "../empData";
 import react from "react";
 
-let DataContext = React.createContext({});
+let dataContext = React.createContext({});
 
 let empTable = () => {
-    const context = useContext(DataContext);
+    const context = useContext(dataContext);
 
     return (
 
