@@ -1,6 +1,6 @@
 // Imports axios to react, so that it can function properly.
 import axios from "axios";
-
+ 
 export default{
     getUsers: function(){
 
