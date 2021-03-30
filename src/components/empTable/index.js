@@ -1,15 +1,18 @@
+import React, { useContext } from "react";
 // Import our required vars
-import "../empData";
-import react from "react";
 
-let dataContext = React.createContext({});
+// Context
+import EmpContext from "../../utils/EmpContext";
 
-let empTable = () => {
-    const context = useContext(dataContext);
+import EmpBody from "../EmpBody";
+
+
+let EmpTable = () => {
+    const context = useContext(EmpContext);
 
     return (
 
-        <div className="empTable mt-5">
+        <div className="EmpTable mt-5">
             <table
                 id="table"
                 className="table"
@@ -32,11 +35,10 @@ let empTable = () => {
                         })}
                     </tr>
                 </thead>
-
-                <empBody />
+                <EmpBody />
             </table>
         </div>
     );
 }
 
-export default empTable;
+export default EmpTable;

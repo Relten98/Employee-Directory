@@ -1,16 +1,18 @@
 // Core imports to get this to work.
-import react, { useContext } from "react";
+import React, { useContext } from "react";
 // Our employee data and table info
-import "../empTable";
-import "../empData";
+import "../EmpTable";
+import "../EmpData";
 
-// Reuses the datacontext stored in the empData component. Perhaps not the best way of doing it, but I am lazy.
-import DataContext from "../empData"
+import EmpContext from "../../utils/EmpContext";
 
 // TODO
-let empBody = () => {
+let EmpBody = () => {
+
+    const context = useContext(EmpContext);
 
     function dateformat(date) {
+    
         // Main array that will be used to sort out the date.
         let dateArray = date.split('-');
         //   Sorts days
@@ -62,4 +64,4 @@ let empBody = () => {
     );
   }
   
-export default empBody;
+export default EmpBody;
