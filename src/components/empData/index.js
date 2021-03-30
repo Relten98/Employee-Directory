@@ -13,19 +13,24 @@ let EmpData = () => {
         users: [],
         // This is going to be important for sorting later on.
         order: 'descend',
-        filterUserList: [],
+
         // The display information that we will use when building out employee table
-        headers: [
+        Userprofile: [
             { name: 'name' },
+            { name: 'IMG' },
             { name: 'DOB' },
-            { name: 'phone' },
             { name: 'email' },
-            { name: 'IMG' }
-        ]
+            { name: 'phone' }
+        ],
+
+        
+        // This is an empty array that will be used to store filtered user data later on.
+        filterUserList: [],
+
     });
 
     // This is what is going to set the order of the table based on either ascending, or descending
-    let sortData = (heading) => {
+    let sortData = (Userprofile) => {
         if (devState.order === 'ascend') {
             setDevState({
                 order: 'descend'
@@ -36,30 +41,42 @@ let EmpData = () => {
             })
         }
 
-        const compareFnc = (a, b) => {
+        // This function what we are going to use to sort, and filter the user data information.
+        const compareFunction = (a, b) => {
+
+            // If the list is needed to go up, or needs to default.
             if (devState.order === "ascend") {
-                if (a[heading] === undefined) {
+                if (a[Userprofile] === undefined) {
                     return 1;
-                } else if (b[heading] === undefined) {
+
+                    // Otherwise return list in reverse, using names
+                } else if (b[Userprofile] === undefined) {
                     return -1;
-                } else if (heading === "name") {
-                    return a[heading].first.localeCompare(b[heading].first);
+
+                } else if (Userprofile === "name") {
+                    return a[Userprofile].first.localeCompare(b[Userprofile].first);
                 } else {
-                    return b[heading] - a[heading];
+                    return b[Userprofile] - a[Userprofile];
                 }
+
+                // NGL this is a total mess... like... what am I even doing here.
+
             } else {
-                if (a[heading] === undefined) {
+                if (a[Userprofile] === undefined) {
                     return 1;
-                } else if (b[heading] === undefined) {
+                } else if (b[Userprofile] === undefined) {
                     return -1;
-                } else if (heading === "name") {
-                    return b[heading].first.localeCompare(a[heading].first);
+                } else if (Userprofile === "name") {
+                    return b[Userprofile].first.localeCompare(a[Userprofile].first);
                 } else {
-                    return b[heading] - a[heading];
+                    return b[Userprofile] - a[Userprofile];
                 }
             }
-        }
-        const sortedUsers = devState.filteredUsers.sort(compareFnc);
+        };
+
+        // The compare function is now called here.
+        // This is also the variable that keeps track of the sorted users
+        let sortedUsers = devState.filteredUsers.sort(compareFunction);
 
         setDevState({
             ...devState,
@@ -69,20 +86,26 @@ let EmpData = () => {
     };
 
     const handleSearchChange = event => {
+
         // Filters out content
         const filter = event.target.value;
 
+        // Returns a list with the newly filtered content
         const filtereduserList = devState.users.filter(item => {
 
+
             let values = item.name.first.toLowerCase();
+
             return values.indexOf(filter.toLowerCase()) !== -1;
         });
+
 
         setDevState({
             ...devState,
             filterUserList: filtereduserList
         });
     };
+
 
     useEffect(() => {
         api.getUsers().then(results => {
@@ -93,6 +116,8 @@ let EmpData = () => {
             });
         });
     }, []);
+
+// And now for the actual react thing, now that functions are out of the way.
 
     return (
         <EmpContext.Provider
@@ -108,5 +133,5 @@ let EmpData = () => {
     );
 };
 
-
+// Finally, we export this lovely mess.
 export default EmpData;
