@@ -1,7 +1,7 @@
 // Imports for react.
 import React, { useState, useEffect } from 'react';
 // import "./style.css";
-import api from "../../utils/api";
+import API from "../../utils/API";
 import "../EmpTable";
 
 // Data Context
@@ -108,14 +108,14 @@ let EmpData = () => {
 
 
     useEffect(() => {
-        api.getUsers().then(results => {
+        API.getUsers().then(results => {
             setDevState({
                 ...devState,
                 users: results.data.results,
                 filterUserList: results.data.results
             });
         });
-    }, []);
+    }, [devState]);
 
 // And now for the actual react thing, now that functions are out of the way.
 

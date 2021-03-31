@@ -4,7 +4,7 @@ import EmpData from "../EmpData/index.js";
 // import "./mainContent.css";
 
 // Context
-import EmpContext from "../../utils/EmpContext";
+// import EmpContext from "../../utils/EmpContext";
 
 function MainContent (){
     return (

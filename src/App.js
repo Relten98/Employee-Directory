@@ -1,4 +1,4 @@
-import react from "react";
+// import react from "react";
 // import empContainer from './components/empContainer';
 
 // Out all important react components to build the application.
