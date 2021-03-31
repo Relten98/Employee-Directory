@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 // Import our required vars
 
+
 // Context
 import EmpContext from "../../utils/EmpContext";
 
@@ -12,7 +13,7 @@ let EmpTable = () => {
 
     return (
 
-        <div className="EmpTable mt-5">
+        <div className="EmpTable">
             <table
                 id="table"
                 className="table"
@@ -22,7 +23,6 @@ let EmpTable = () => {
                         {context.developerState.headings.map(({ name, width }) => {
                             return (
                                 <th
-                                    className="col"
                                     key={name}
                                     style={{ width }}
                                     onClick={() => {

@@ -4,13 +4,16 @@ import React, { useContext } from "react";
 import "../EmpTable";
 import "../EmpData";
 
+// Our context
 import EmpContext from "../../utils/EmpContext";
 
-// TODO
+// The body of our react application.
 let EmpBody = () => {
 
     const context = useContext(EmpContext);
 
+
+    // DOB when generated through the link will be sent as a string, this formats it so it isn't a total mess.
     function dateformat(date) {
     
         // Main array that will be used to sort out the date.
