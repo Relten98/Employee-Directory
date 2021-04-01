@@ -1,6 +1,9 @@
 // Imports
 import React, { useContext } from "react";
 
+// CSS Sheet
+import "./Searchbar.css";
+
 // Our context
 import EmpContext from "../../utils/EmpContext";
 
@@ -8,8 +11,9 @@ import EmpContext from "../../utils/EmpContext";
 const Searchbar = () => {
     const context = useContext(EmpContext);
 
+    // Lmao y me
     return (
-        <div className="searchbox">
+        <div className="SearchName">
             <form className="form-inline">
                 <input
                     className="form-control mr-sm-2"
@@ -25,4 +29,5 @@ const Searchbar = () => {
         </div>
     );
 }
+
 export default Searchbar;

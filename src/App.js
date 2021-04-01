@@ -12,8 +12,8 @@ import './index.css';
 function App() {
   return (
     <div className="App">
+        <Header />
    <Wrapper>
-     <Header />
      <MainContent />
    </Wrapper>
     </div>

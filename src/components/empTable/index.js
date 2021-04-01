@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-// Import our required vars
 
+// Import our required vars
+import EmpBody from "../EmpBody";
 
 // Context
 import EmpContext from "../../utils/EmpContext";
 
-import EmpBody from "../EmpBody";
 
 
 let EmpTable = () => {
@@ -13,14 +13,14 @@ let EmpTable = () => {
 
     return (
 
-        <div className="EmpTable">
+        <div className="emptable">
             <table
                 id="table"
                 className="table"
             >
                 <thead>
                     <tr>
-                        {context.developerState.headings.map(({ name, width }) => {
+                        {context.developerState.Userprofile.map(({ name, width }) => {
                             return (
                                 <th
                                     key={name}

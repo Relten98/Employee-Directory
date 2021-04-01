@@ -1,7 +1,14 @@
+html {
+  background: #d6c6b3;
+  height: auto;
+  width: auto;
+}
 .wrapper {
   padding-top: 50px;
-  background: #ECEFF1;
-  height: 100%;
+  color: white;
+  background: #d6c6b3;
+  height: 200%;
+  width: auto;
   display: flex;
   flex-flow: row wrap;
   padding: 20px;

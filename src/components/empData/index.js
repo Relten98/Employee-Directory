@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 // import "./style.css";
 import API from "../../utils/API";
-import "../EmpTable";
+import EmpTable from "../EmpTable";
+import Navbar from "../Navbar";
 
 // Data Context
 import EmpContext from "../../utils/EmpContext";
@@ -122,10 +123,15 @@ let EmpData = () => {
     return (
         <EmpContext.Provider
             value={{ devState, handleSearchChange, sortData }}
-        >
+        >        
+          <Navbar />
+
             <div className="data-area">
-                {devState.sortedusrs.length > 0
-                    ? <empTable />
+
+{/* AAAAAAAAA. filterUserList not SORTEDUSERS AAAAA */}
+
+                {devState.filterUserList.length > 0
+                    ? <EmpTable />
                     : <div></div>
                 }
             </div>
@@ -135,3 +141,6 @@ let EmpData = () => {
 
 // Finally, we export this lovely mess.
 export default EmpData;
+
+
+// Okay, so the app sort of displays. Looks like hot garbage, but at least it sort of
