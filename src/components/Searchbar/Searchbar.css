@@ -1,8 +1,18 @@
-.searchbox button{
+.SearchName {
+    font-size: medium;
+    align-self: center;
+    position: relative;
+}
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7a0d0d;
     border: 1px solid #b30606;
     color:white;
+    text-align: center;
+    border-bottom-right-radius: 2%;
+    border-top-right-radius: 2%;
 }
-.searchbox button:hover {
-    background-color: #ca0707;
-    color:white;
+.btn:hover {
+    background-color: #d34c4c;
+    color:black;
 }

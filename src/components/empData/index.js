@@ -1,8 +1,13 @@
 // Imports for react.
 import React, { useState, useEffect } from 'react';
-// import "./style.css";
+
+
+import "./style.css";
+
 import API from "../../utils/API";
 import EmpTable from "../EmpTable";
+
+// Fancy schmancy Nav bar
 import Navbar from "../Navbar";
 
 // Data Context
@@ -126,7 +131,7 @@ let EmpData = () => {
         >        
           <Navbar />
 
-            <div className="data-area">
+            <div className="datasection">
 
 {/* AAAAAAAAA. filterUserList not SORTEDUSERS AAAAA */}
 

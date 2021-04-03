@@ -1,12 +1,12 @@
 html {
-  background: #d6c6b3;
-  height: auto;
+  background-image: linear-gradient(#e5cbc0, #d8b8aa);
+  height: 100%;
   width: auto;
 }
 .wrapper {
   padding-top: 50px;
   color: white;
-  background: #d6c6b3;
+  background: transparent;
   height: 200%;
   width: auto;
   display: flex;
